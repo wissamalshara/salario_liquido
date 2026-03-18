@@ -30,8 +30,8 @@ namespace salario_liquido
             vh = Convert.ToDouble(textBox4.Text);
             sb = ht * vh;
 
-            label4.Text = "Salário bruto: " + sb.ToString();
-           
+            label4.Text = $"Salário bruto: {sb:F2}";
+
 
         }
 
@@ -46,8 +46,8 @@ namespace salario_liquido
             td = (pd / 100) * sb;
 
 
-            label5.Text = "Total de desconto: " + $"{td:0.00}" + td.ToString();
-            
+            label5.Text = $"Total de desconto: {td:F2}";
+
 
 
         }
@@ -63,8 +63,8 @@ namespace salario_liquido
             td = (pd / 100) * sb;
             sl = sb - td;
 
-            label6.Text = "Salário líquido: " + sl.ToString();
-            
+            label6.Text = $"Salário líquido: {sl:F2}";
+
 
         }
 
@@ -77,5 +77,20 @@ namespace salario_liquido
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox4.Clear();
+            
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
-}
+    }
+
